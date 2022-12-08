@@ -4,10 +4,71 @@ version: 0.0.1-SNAPSHOT
 author: sparklearner123@gmail.com
 language: python
 buildSystem: wheel
-pipelines: {}
-datasets: {}
+pipelines:
+  pipelines/Pricing:
+    name: Pricing
+    description: creates a report summarizing prices, discounts, and shipping status
+    author: sparklearner123@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-12-08 21:02:35'
+    datasets:
+      inputs:
+      - datasets/Shipments
+      outputs:
+      - datasets/report_shipment_prices
+    dependencies: {}
+datasets:
+  datasets/Shipments:
+    name: Shipments
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-12-08 21:05:07'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: Warehouse
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-12-08 21:05:07'
+  datasets/report_shipment_prices:
+    name: report_shipment_prices
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-12-08 21:12:16'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: Database
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-12-08 21:12:16'
 templates: {}
-jobs: {}
+jobs:
+  jobs/PricingReportBatchJob:
+    name: PricingReportBatchJob
+    description: ''
+    fabricUID: 990
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0/2 * * * ? *
+    timeout: null
+    alerting:
+      emails: oncall@acme.com
+      onStart: true
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/Pricing
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2022-12-08 21:21:01'
+    author: sparklearner123@gmail.com
 libraries: []
 subgraphs: {}
 sqlModels: {}
