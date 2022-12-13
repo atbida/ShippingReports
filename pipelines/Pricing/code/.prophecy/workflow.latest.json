@@ -75,7 +75,7 @@
       "metadata" : {
         "label" : "ReportPrices",
         "slug" : "ReportPrices",
-        "x" : 920.000306122334,
+        "x" : 920.0003046491992,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -101,7 +101,7 @@
       "metadata" : {
         "label" : "SumAmounts",
         "slug" : "SumAmounts",
-        "x" : 520.0003148038782,
+        "x" : 520.0007854526397,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -194,7 +194,7 @@
       "metadata" : {
         "label" : "ByStatus",
         "slug" : "ByStatus",
-        "x" : 720.0003946071248,
+        "x" : 720.0001051313421,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -236,7 +236,7 @@
       "metadata" : {
         "label" : "Cleanup",
         "slug" : "Cleanup",
-        "x" : 320.00068192739553,
+        "x" : 320.00070803384796,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -318,7 +318,7 @@
       "metadata" : {
         "label" : "Shipments",
         "slug" : "Shipments",
-        "x" : 120.00026469141633,
+        "x" : 120.0009298032828,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
