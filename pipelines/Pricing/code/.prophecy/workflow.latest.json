@@ -67,15 +67,54 @@
     "sourcePort" : "zca9-6n3uRVTvW17BxzpW$$4SpoqnUHTkGn405oFIYo-",
     "target" : "pKdW1FxuSw9NwgWTtGMBb$$i5tm9LJHXESbkc_sBx4Ui",
     "targetPort" : "i4Lzlxqq47UhSnLrbcunn$$6X1vKo37fktqYdz9ix0ld"
+  }, {
+    "id" : "VE0tOcYvOqk2ZpwsI1vjC",
+    "source" : "kCZLzEmPWiSwwbhB_mKzs$$GJMGB6OmO4z_1zwJb8hCa",
+    "sourcePort" : "KV24DPOw7wk1IriVmzSoT$$PIBGMnRpgqj8di8pqDf-n",
+    "target" : "SVjU8vREAC0gshqNFYXm5$$OeyCMGIZhx-s3_iZzAD16",
+    "targetPort" : "f9WBHW81fdXouTLVQviKO$$LXv1WbSIAxaqqwwNed6N6"
   } ],
   "processes" : {
+    "SVjU8vREAC0gshqNFYXm5$$OeyCMGIZhx-s3_iZzAD16" : {
+      "id" : "SVjU8vREAC0gshqNFYXm5$$OeyCMGIZhx-s3_iZzAD16",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 520.6001718158226,
+        "y" : 306.80000000000007,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "f9WBHW81fdXouTLVQviKO$$LXv1WbSIAxaqqwwNed6N6",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "MSGmDlCcFHd3V93KYVJeo$$-djaWG_9jWDElOSh4vstf",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "f9WBHW81fdXouTLVQviKO$$LXv1WbSIAxaqqwwNed6N6##RETURNFLAG" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "RETURNFLAG is true"
+        }
+      }
+    },
     "pKdW1FxuSw9NwgWTtGMBb$$i5tm9LJHXESbkc_sBx4Ui" : {
       "id" : "pKdW1FxuSw9NwgWTtGMBb$$i5tm9LJHXESbkc_sBx4Ui",
       "component" : "Target",
       "metadata" : {
         "label" : "ReportPrices",
         "slug" : "ReportPrices",
-        "x" : 920.0003046491992,
+        "x" : 920.0003226309059,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -101,7 +140,7 @@
       "metadata" : {
         "label" : "SumAmounts",
         "slug" : "SumAmounts",
-        "x" : 520.0007854526397,
+        "x" : 520.0004798802169,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -194,7 +233,7 @@
       "metadata" : {
         "label" : "ByStatus",
         "slug" : "ByStatus",
-        "x" : 720.0001051313421,
+        "x" : 720.0002712522062,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -236,7 +275,7 @@
       "metadata" : {
         "label" : "Cleanup",
         "slug" : "Cleanup",
-        "x" : 320.00070803384796,
+        "x" : 320.00072053450714,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -318,7 +357,7 @@
       "metadata" : {
         "label" : "Shipments",
         "slug" : "Shipments",
-        "x" : 120.0009298032828,
+        "x" : 120.00002100073937,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
