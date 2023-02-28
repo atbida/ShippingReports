@@ -8,15 +8,18 @@ from pricing.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_Customer_TPCH = Customer_TPCH(spark)
-    df_Shipments = Shipments(spark)
     df_Orders_TPCH = Orders_TPCH(spark)
-    df_Join_1 = Join_1(spark, df_Shipments, df_Orders_TPCH)
-    df_Cleanup = Cleanup(spark, df_Shipments)
+    df_Shipments = Shipments(spark)
+    df_Reformat_1 = Reformat_1(spark, df_Shipments)
+    df_Join_1 = Join_1(spark, df_Reformat_1, df_Orders_TPCH, df_Customer_TPCH)
+    df_Filter_1 = Filter_1(spark, df_Join_1)
+    df_Aggregate_1 = Aggregate_1(spark, df_Filter_1)
+    df_OrderBy_1 = OrderBy_1(spark, df_Aggregate_1)
+    df_Cleanup = Cleanup(spark, df_Reformat_1)
     df_AggregateLogic = AggregateLogic(spark, df_Cleanup)
     df_SumAmounts = SumAmounts(spark, df_Cleanup)
     df_ByStatus = ByStatus(spark, df_SumAmounts)
     ReportPrices(spark, df_ByStatus)
-    df_Reformat_1 = Reformat_1(spark, df_Join_1)
 
 def main():
     spark = SparkSession.builder\

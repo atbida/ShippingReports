@@ -2,112 +2,112 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: L_ORDERKEY
+  - name: ORDERKEY
     type: decimal(38,0)
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_PARTKEY
+  - name: PARTKEY
     type: decimal(38,0)
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_SUPPKEY
+  - name: SUPPKEY
     type: decimal(38,0)
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_LINENUMBER
+  - name: LINENUMBER
     type: decimal(38,0)
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_QUANTITY
+  - name: QUANTITY
     type: decimal(12,2)
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_EXTENDEDPRICE
+  - name: EXTENDEDPRICE
     type: decimal(12,2)
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_DISCOUNT
+  - name: DISCOUNT
     type: decimal(12,2)
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_TAX
+  - name: TAX
     type: decimal(12,2)
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_RETURNFLAG
+  - name: RETURNFLAG
     type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_DELIVERYSTATUS
+  - name: DELIVERYSTATUS
     type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_SHIPDATE
+  - name: SHIPDATE
     type: date
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_COMMITDATE
+  - name: COMMITDATE
     type: date
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_RECEIPTDATE
+  - name: RECEIPTDATE
     type: date
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_SHIPINSTRUCT
+  - name: SHIPINSTRUCT
     type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_SHIPMODE
+  - name: SHIPMODE
     type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: L_COMMENT
+  - name: COMMENT
     type: string
     nullable: true
     metadata:

@@ -1,8 +1,9 @@
 version: 1
-configurations:
-- Agriculture
-- Manufacturing
-- Medical
-- Retail
-- default
 dependencies: []
+configurations:
+- Machinery
+- Automobile
+- Furniture
+- default
+- Household
+- Building

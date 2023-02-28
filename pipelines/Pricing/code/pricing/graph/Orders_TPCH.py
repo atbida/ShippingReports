@@ -9,7 +9,7 @@ def Orders_TPCH(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(
           StructType([
-            StructField("O_ORDERKEY", StringType(), True), StructField("O_CUSTKEY", StringType(), True), StructField("O_ORDERSTATUS", StringType(), True), StructField("O_TOTALPRICE", StringType(), True), StructField("O_ORDERDATE", StringType(), True), StructField("O_ORDER-PRIORITY", StringType(), True), StructField("O_CLERK", StringType(), True), StructField("O_SHIP-PRIORITY", StringType(), True), StructField("O_COMMENT", StringType(), True)
+            StructField("O_ORDERKEY", StringType(), True), StructField("O_CUSTKEY", StringType(), True), StructField("O_ORDERSTATUS", StringType(), True), StructField("O_TOTALPRICE", StringType(), True), StructField("O_ORDERDATE", DateType(), True), StructField("O_ORDER-PRIORITY", StringType(), True), StructField("O_CLERK", StringType(), True), StructField("O_SHIP-PRIORITY", StringType(), True), StructField("O_COMMENT", StringType(), True)
         ])
         )\
         .option("header", False)\
