@@ -14,6 +14,8 @@ pipelines:
     createdAt: '2022-12-08 21:02:35'
     datasets:
       inputs:
+      - datasets/Customer_TPCH
+      - datasets/Orders_TPCH
       - datasets/Shipments
       outputs:
       - datasets/report_shipment_prices
@@ -24,6 +26,7 @@ datasets:
     description: ''
     author: sparklearner123@gmail.com
     createdAt: '2022-12-08 21:05:07'
+    mode: batch
     physicalDatasets:
       dev:
         fabricId: 990
@@ -36,6 +39,7 @@ datasets:
     description: ''
     author: sparklearner123@gmail.com
     createdAt: '2022-12-08 21:12:16'
+    mode: batch
     physicalDatasets:
       dev:
         fabricId: 990
@@ -43,6 +47,32 @@ datasets:
         description: ''
         author: sparklearner123@gmail.com
         createdAt: '2022-12-08 21:12:16'
+  datasets/Orders_TPCH:
+    name: Orders_TPCH
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2023-02-25 01:28:30'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: File
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2023-02-25 01:28:30'
+  datasets/Customer_TPCH:
+    name: Customer_TPCH
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2023-02-27 20:51:42'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: File
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2023-02-27 20:51:42'
 templates: {}
 jobs:
   jobs/PricingReportBatchJob:
@@ -73,6 +103,6 @@ libraries: []
 subgraphs: {}
 sqlModels: {}
 sqlPipeline: null
-dependencies: '[]'
+dependencies: []
 projectDependencies: {}
 pipelineConfigurations: {}
