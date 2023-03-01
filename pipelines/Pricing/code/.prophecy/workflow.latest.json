@@ -16,7 +16,28 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "Database",
+          "kind" : {
+            "type" : "string",
+            "value" : "RETAIL"
+          },
+          "optional" : false
+        }, {
+          "name" : "segment",
+          "kind" : {
+            "type" : "string",
+            "value" : "BUILDING"
+          },
+          "optional" : false
+        }, {
+          "name" : "datestring",
+          "kind" : {
+            "type" : "string",
+            "value" : "1993-11-13"
+          },
+          "optional" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -38,18 +59,12 @@
     "interimModeEnabled" : true,
     "visualCodeInterimMode" : "Disabled",
     "recordsLimit" : {
-      "enabled" : false,
-      "value" : 1000
+      "enabled" : true,
+      "value" : 100000
     },
     "topLevelPackage" : "pricing"
   },
   "connections" : [ {
-    "id" : "Qa4Coi5Y0BgKFQiYgYO2e",
-    "source" : "GxBesIASLHOBbqdEqxjsc$$GBqLMRQPrIQGNvLH4NnjD",
-    "sourcePort" : "rx5Yf38R-Lq0XRrh1SuUR$$toPX_eZo2xWOmO45w84If",
-    "target" : "kCZLzEmPWiSwwbhB_mKzs$$GJMGB6OmO4z_1zwJb8hCa",
-    "targetPort" : "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT"
-  }, {
     "id" : "fhfIgagNi3LdZaxuobgRj",
     "source" : "kCZLzEmPWiSwwbhB_mKzs$$GJMGB6OmO4z_1zwJb8hCa",
     "sourcePort" : "KV24DPOw7wk1IriVmzSoT$$PIBGMnRpgqj8di8pqDf-n",
@@ -68,21 +83,96 @@
     "target" : "pKdW1FxuSw9NwgWTtGMBb$$i5tm9LJHXESbkc_sBx4Ui",
     "targetPort" : "i4Lzlxqq47UhSnLrbcunn$$6X1vKo37fktqYdz9ix0ld"
   }, {
-    "id" : "VE0tOcYvOqk2ZpwsI1vjC",
+    "id" : "s8VtJmt5CJvNfj-EeV0NW",
     "source" : "kCZLzEmPWiSwwbhB_mKzs$$GJMGB6OmO4z_1zwJb8hCa",
     "sourcePort" : "KV24DPOw7wk1IriVmzSoT$$PIBGMnRpgqj8di8pqDf-n",
-    "target" : "SVjU8vREAC0gshqNFYXm5$$OeyCMGIZhx-s3_iZzAD16",
-    "targetPort" : "f9WBHW81fdXouTLVQviKO$$LXv1WbSIAxaqqwwNed6N6"
+    "target" : "XbQemawk8SvVVT_NIJIz3$$b2HjXE32eEd6-RqbFDF0s",
+    "targetPort" : "U9KTjm-i6G0JVYgiB6Jw-$$_K982h-KqNJvhTAQfoxYq"
+  }, {
+    "id" : "Gt_ArzcR_PGq_EehvYBB-",
+    "source" : "bTTW0Lm8B3PX-CV99ShIi$$10QTtfEABkST4dERD7BK2",
+    "sourcePort" : "5hd876X66TGmOzr6k68kz$$2KCztveSiAcD476VIDT-q",
+    "target" : "jdR7nZu03GWqYbx_vy_P2$$d4PL_FcSI-CivJW1pco-E",
+    "targetPort" : "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL"
+  }, {
+    "id" : "muhosM8qrAXd3a2FqDz8g",
+    "source" : "VZ7ZpeitwL-kfEnoNGVGy$$yuHDuRnNrIKiPBmUAJgPs",
+    "sourcePort" : "x2xrinmetCK7lCpKlhntT$$_TQIhzK6N88hLdKMb22ry",
+    "target" : "jdR7nZu03GWqYbx_vy_P2$$d4PL_FcSI-CivJW1pco-E",
+    "targetPort" : "SyeFta4yNWh_tq2_aadVc$$ZmjyXy09p6p0dQLUc4ljX"
+  }, {
+    "id" : "OcnHLdjtOlVsH4EG1LB7D",
+    "source" : "jdR7nZu03GWqYbx_vy_P2$$d4PL_FcSI-CivJW1pco-E",
+    "sourcePort" : "-UkdlfW7e8ElCZBr07aeT$$veHi6QlESFs_j2MgOA-Pv",
+    "target" : "xNvnnzZNyrf2lyyX2GHS-$$E_7JrTUyeaUVOeC-lrljg",
+    "targetPort" : "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd"
+  }, {
+    "id" : "-r03dlQ8ecT4hOKIwo1zG$$PrDJRJhOOteNO0cIVdxif",
+    "source" : "xNvnnzZNyrf2lyyX2GHS-$$E_7JrTUyeaUVOeC-lrljg",
+    "sourcePort" : "4YUuEWSFiq7aOk3XAnH5z$$Wt6dlaE7lvYTupAxlKkXU",
+    "target" : "CJehEwqpSCa9hDMifU-Tg$$fUkFf9ZAl-RETCYxQDOv_",
+    "targetPort" : "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw"
+  }, {
+    "id" : "Ho6ITHwb8FbkQS0WnZ147$$IptlwH1W4DX1m3JsYYRoO",
+    "source" : "CJehEwqpSCa9hDMifU-Tg$$fUkFf9ZAl-RETCYxQDOv_",
+    "sourcePort" : "Mgd4zQ1Kfsd2q5r7BXT4a$$IGtKT6YWS7we4lUNjaadw",
+    "target" : "_AtaeVOFVJfSYlXOvF7Gl$$LUhHzE2kSBsAzg15pRInb",
+    "targetPort" : "1_hIr_TQoGBIe3R38QWJz$$PvqZ7h_h8EDCrmOLDt47k"
+  }, {
+    "id" : "e7phaslSBaWgUI5j2j3vf",
+    "source" : "GxBesIASLHOBbqdEqxjsc$$GBqLMRQPrIQGNvLH4NnjD",
+    "sourcePort" : "rx5Yf38R-Lq0XRrh1SuUR$$toPX_eZo2xWOmO45w84If",
+    "target" : "pgGRkfrdfH_Etgmt5Iro1$$5R1iML8DAwwTcZVcJw3LI",
+    "targetPort" : "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD"
+  }, {
+    "id" : "P94bywfhO6F5oSy4WGhEF",
+    "source" : "pgGRkfrdfH_Etgmt5Iro1$$5R1iML8DAwwTcZVcJw3LI",
+    "sourcePort" : "LkwKwTwjElII-K26gt0oU$$fRVS3_6ufHkigmXXysiqn",
+    "target" : "jdR7nZu03GWqYbx_vy_P2$$d4PL_FcSI-CivJW1pco-E",
+    "targetPort" : "HXcAGaSPE9M90F7M1QvEy$$iuCwu9YI5AKQSpwTEEj8Z"
+  }, {
+    "id" : "14aruK0lme-o9acceN-KR",
+    "source" : "pgGRkfrdfH_Etgmt5Iro1$$5R1iML8DAwwTcZVcJw3LI",
+    "sourcePort" : "LkwKwTwjElII-K26gt0oU$$fRVS3_6ufHkigmXXysiqn",
+    "target" : "kCZLzEmPWiSwwbhB_mKzs$$GJMGB6OmO4z_1zwJb8hCa",
+    "targetPort" : "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT"
   } ],
   "processes" : {
-    "SVjU8vREAC0gshqNFYXm5$$OeyCMGIZhx-s3_iZzAD16" : {
-      "id" : "SVjU8vREAC0gshqNFYXm5$$OeyCMGIZhx-s3_iZzAD16",
-      "component" : "Filter",
+    "VZ7ZpeitwL-kfEnoNGVGy$$yuHDuRnNrIKiPBmUAJgPs" : {
+      "id" : "VZ7ZpeitwL-kfEnoNGVGy$$yuHDuRnNrIKiPBmUAJgPs",
+      "component" : "Source",
       "metadata" : {
-        "label" : "Filter_1",
-        "slug" : "Filter_1",
-        "x" : 520.6001718158226,
-        "y" : 306.80000000000007,
+        "label" : "Customer_TPCH",
+        "slug" : "Customer_TPCH",
+        "x" : -20,
+        "y" : 720,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "x2xrinmetCK7lCpKlhntT$$_TQIhzK6N88hLdKMb22ry",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Customer_TPCH"
+      }
+    },
+    "_AtaeVOFVJfSYlXOvF7Gl$$LUhHzE2kSBsAzg15pRInb" : {
+      "id" : "_AtaeVOFVJfSYlXOvF7Gl$$LUhHzE2kSBsAzg15pRInb",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "Date",
+        "slug" : "Date",
+        "x" : 900,
+        "y" : 420,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -90,21 +180,247 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "f9WBHW81fdXouTLVQviKO$$LXv1WbSIAxaqqwwNed6N6",
-          "slug" : "in0"
+          "id" : "1_hIr_TQoGBIe3R38QWJz$$PvqZ7h_h8EDCrmOLDt47k",
+          "slug" : "in0",
+          "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "MSGmDlCcFHd3V93KYVJeo$$-djaWG_9jWDElOSh4vstf",
-          "slug" : "out"
+          "id" : "fXiKV2owG3g6tBWasx196$$OBkyVEHUz_GrIKUiIj7X_",
+          "slug" : "out",
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "f9WBHW81fdXouTLVQviKO$$LXv1WbSIAxaqqwwNed6N6##RETURNFLAG" ],
-        "condition" : {
-          "format" : "sql",
-          "expression" : "RETURNFLAG is true"
+        "columnsSelector" : [ "1_hIr_TQoGBIe3R38QWJz$$PvqZ7h_h8EDCrmOLDt47k##REVENUE", "1_hIr_TQoGBIe3R38QWJz$$PvqZ7h_h8EDCrmOLDt47k##O_ORDERDATE" ],
+        "orders" : [ {
+          "expression" : {
+            "format" : "sql",
+            "expression" : "REVENUE"
+          },
+          "sortType" : "desc"
+        }, {
+          "expression" : {
+            "format" : "sql",
+            "expression" : "O_ORDERDATE"
+          },
+          "sortType" : "asc"
+        } ]
+      }
+    },
+    "jdR7nZu03GWqYbx_vy_P2$$d4PL_FcSI-CivJW1pco-E" : {
+      "id" : "jdR7nZu03GWqYbx_vy_P2$$d4PL_FcSI-CivJW1pco-E",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join",
+        "slug" : "Join",
+        "x" : 420,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HXcAGaSPE9M90F7M1QvEy$$iuCwu9YI5AKQSpwTEEj8Z",
+          "slug" : "in0",
+          "isStreaming" : false
+        }, {
+          "id" : "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL",
+          "slug" : "in1",
+          "isStreaming" : false
+        }, {
+          "id" : "SyeFta4yNWh_tq2_aadVc$$ZmjyXy09p6p0dQLUc4ljX",
+          "slug" : "in2",
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "-UkdlfW7e8ElCZBr07aeT$$veHi6QlESFs_j2MgOA-Pv",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.L_ORDERKEY=in1.O_ORDERKEY"
+          },
+          "joinType" : "inner"
+        }, {
+          "alias" : "in2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.C_CUSTKEY=in1.O_CUSTKEY"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "HXcAGaSPE9M90F7M1QvEy$$iuCwu9YI5AKQSpwTEEj8Z",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "SyeFta4yNWh_tq2_aadVc$$ZmjyXy09p6p0dQLUc4ljX",
+          "alias" : "in2",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "HXcAGaSPE9M90F7M1QvEy$$iuCwu9YI5AKQSpwTEEj8Z##L_ORDERKEY", "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL##O_ORDERKEY", "SyeFta4yNWh_tq2_aadVc$$ZmjyXy09p6p0dQLUc4ljX##C_CUSTKEY", "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL##O_CUSTKEY" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      }
+    },
+    "XbQemawk8SvVVT_NIJIz3$$b2HjXE32eEd6-RqbFDF0s" : {
+      "id" : "XbQemawk8SvVVT_NIJIz3$$b2HjXE32eEd6-RqbFDF0s",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "AggregateLogic",
+        "slug" : "AggregateLogic",
+        "x" : 520,
+        "y" : -20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "U9KTjm-i6G0JVYgiB6Jw-$$_K982h-KqNJvhTAQfoxYq",
+          "slug" : "in0",
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "A_0lj5vlU48axA2odKHz-$$ZUVwLWrCGKDGdlTy0MgEP",
+          "slug" : "out0",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : { },
+      "connections" : [ {
+        "id" : "nStfZMIjDBwhF00ynRV87",
+        "source" : "XbQemawk8SvVVT_NIJIz3$$b2HjXE32eEd6-RqbFDF0s",
+        "sourcePort" : "U9KTjm-i6G0JVYgiB6Jw-$$_K982h-KqNJvhTAQfoxYq",
+        "target" : "zEpZdxLQLo8WuHEgQPoYd$$Kly_beW_UJA_dCoYcVaJf",
+        "targetPort" : "TZDtkFI-TicthE6YclHVg$$q2db7T46X3hjduV7PeZn1"
+      }, {
+        "id" : "IbVEmvrOT0OvV-oYmfwgm",
+        "source" : "zEpZdxLQLo8WuHEgQPoYd$$Kly_beW_UJA_dCoYcVaJf",
+        "sourcePort" : "XaiGsBT__x44JfAoQ_8vF$$zJyuriOkFC6Zhsk9Bg-Hg",
+        "target" : "XbQemawk8SvVVT_NIJIz3$$b2HjXE32eEd6-RqbFDF0s",
+        "targetPort" : "A_0lj5vlU48axA2odKHz-$$ZUVwLWrCGKDGdlTy0MgEP"
+      } ],
+      "processes" : {
+        "zEpZdxLQLo8WuHEgQPoYd$$Kly_beW_UJA_dCoYcVaJf" : {
+          "id" : "zEpZdxLQLo8WuHEgQPoYd$$Kly_beW_UJA_dCoYcVaJf",
+          "component" : "Aggregate",
+          "metadata" : {
+            "label" : "SumAmounts_1",
+            "slug" : "SumAmounts_1",
+            "x" : 100,
+            "y" : 360,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "TZDtkFI-TicthE6YclHVg$$q2db7T46X3hjduV7PeZn1",
+              "slug" : "in0",
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "XaiGsBT__x44JfAoQ_8vF$$zJyuriOkFC6Zhsk9Bg-Hg",
+              "slug" : "out",
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "allIns" : false,
+            "doPivot" : false,
+            "aggregate" : [ {
+              "target" : "SUM_QTY",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "sum(QUANTITY) "
+              },
+              "description" : "",
+              "_row_id" : ""
+            }, {
+              "target" : "AVG_QTY",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "format_number(avg(QUANTITY), 2)"
+              },
+              "description" : "",
+              "_row_id" : ""
+            }, {
+              "target" : "SUM_CHARGE",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "format_number(sum(EXTENDEDPRICE * (1 - DISCOUNT) * (1 + TAX)), 2)"
+              },
+              "description" : "",
+              "_row_id" : ""
+            }, {
+              "target" : "COUNT_ORDER",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "count(*)"
+              },
+              "description" : "",
+              "_row_id" : ""
+            }, {
+              "target" : "COUNT_CLEARANCE",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "count_if(CLEARANCE == 'true')"
+              },
+              "description" : "",
+              "_row_id" : ""
+            } ],
+            "allowSelection" : true,
+            "pivotColumn" : null,
+            "pivotValues" : [ ],
+            "activeTab" : "groupBy",
+            "columnsSelector" : [ ],
+            "groupBy" : [ {
+              "target" : "RETURNFLAG",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "RETURNFLAG"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "DELIVERYSTATUS",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "DELIVERYSTATUS"
+              },
+              "description" : "",
+              "_row_id" : null
+            } ]
+          }
         }
       }
     },
@@ -114,7 +430,7 @@
       "metadata" : {
         "label" : "ReportPrices",
         "slug" : "ReportPrices",
-        "x" : 920.0003226309059,
+        "x" : 920,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -124,7 +440,8 @@
       "ports" : {
         "inputs" : [ {
           "id" : "i4Lzlxqq47UhSnLrbcunn$$6X1vKo37fktqYdz9ix0ld",
-          "slug" : "in0"
+          "slug" : "in0",
+          "isStreaming" : false
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -150,11 +467,13 @@
       "ports" : {
         "inputs" : [ {
           "id" : "vs8FlLUIJF5rgK8IzU2iA$$2JR0cDU7BxgFqgk09Afxl",
-          "slug" : "in0"
+          "slug" : "in0",
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "OPNCP3n7eFNSeY53mEXtr$$3cSF8oIx4m-QmZPVSvGQU",
-          "slug" : "out"
+          "slug" : "out",
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
@@ -227,6 +546,153 @@
         } ]
       }
     },
+    "pgGRkfrdfH_Etgmt5Iro1$$5R1iML8DAwwTcZVcJw3LI" : {
+      "id" : "pgGRkfrdfH_Etgmt5Iro1$$5R1iML8DAwwTcZVcJw3LI",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 160,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD",
+          "slug" : "in0",
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "LkwKwTwjElII-K26gt0oU$$fRVS3_6ufHkigmXXysiqn",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "importLanguage" : "python",
+        "expressions" : [ {
+          "target" : "L_ORDERKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ORDERKEY"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_PARTKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "PARTKEY"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_SUPPKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "SUPPKEY"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_LINENUMBER",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "LINENUMBER"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_QUANTITY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "QUANTITY"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_EXTENDEDPRICE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "EXTENDEDPRICE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_DISCOUNT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "DISCOUNT"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_TAX",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "TAX"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_RETURNFLAG",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "RETURNFLAG"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_DELIVERYSTATUS",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "DELIVERYSTATUS"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_SHIPDATE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "SHIPDATE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_COMMITDATE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "COMMITDATE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_RECEIPTDATE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "RECEIPTDATE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_SHIPINSTRUCT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "SHIPINSTRUCT"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_SHIPMODE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "SHIPMODE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_COMMENT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "COMMENT"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##RECEIPTDATE", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##SUPPKEY", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##COMMENT", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##LINENUMBER", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##PARTKEY", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##QUANTITY", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##SHIPINSTRUCT", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##EXTENDEDPRICE", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##TAX", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##COMMITDATE", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##RETURNFLAG", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##DISCOUNT", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##SHIPDATE", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##ORDERKEY", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##DELIVERYSTATUS", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##SHIPMODE" ]
+      }
+    },
     "eMKsxsutBgJHSGSDjGAZY$$zGdMXBaPj9GzwoOCIyVEl" : {
       "id" : "eMKsxsutBgJHSGSDjGAZY$$zGdMXBaPj9GzwoOCIyVEl",
       "component" : "OrderBy",
@@ -243,11 +709,13 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ht_vXEjAqlUQHgUXX2L-n$$0Yt5scQLZkPrbtt-_H6W2",
-          "slug" : "in0"
+          "slug" : "in0",
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "zca9-6n3uRVTvW17BxzpW$$4SpoqnUHTkGn405oFIYo-",
-          "slug" : "out"
+          "slug" : "out",
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
@@ -269,6 +737,155 @@
         } ]
       }
     },
+    "CJehEwqpSCa9hDMifU-Tg$$fUkFf9ZAl-RETCYxQDOv_" : {
+      "id" : "CJehEwqpSCa9hDMifU-Tg$$fUkFf9ZAl-RETCYxQDOv_",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "SumRevenue",
+        "slug" : "SumRevenue",
+        "x" : 740,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw",
+          "slug" : "in0",
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "Mgd4zQ1Kfsd2q5r7BXT4a$$IGtKT6YWS7we4lUNjaadw",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "L_ORDERKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "(L_ORDERKEY)"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "REVENUE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "SUM(L_EXTENDEDPRICE *(1-L_DISCOUNT))"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "O_SHIP-PRIORITY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "(`O_SHIP-PRIORITY`)"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##O_ORDERDATE", "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##L_DISCOUNT", "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##O_SHIP-PRIORITY", "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##L_EXTENDEDPRICE", "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##L_ORDERKEY" ],
+        "groupBy" : [ {
+          "target" : "L_ORDERKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_ORDERKEY"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "O_ORDERDATE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "O_ORDERDATE"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "O_SHIP-PRIORITY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`O_SHIP-PRIORITY`"
+          },
+          "description" : "",
+          "_row_id" : ""
+        } ]
+      }
+    },
+    "xNvnnzZNyrf2lyyX2GHS-$$E_7JrTUyeaUVOeC-lrljg" : {
+      "id" : "xNvnnzZNyrf2lyyX2GHS-$$E_7JrTUyeaUVOeC-lrljg",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Where",
+        "slug" : "Where",
+        "x" : 580,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd",
+          "slug" : "in0",
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "4YUuEWSFiq7aOk3XAnH5z$$Wt6dlaE7lvYTupAxlKkXU",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##O_ORDERKEY", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##L_SHIPDATE", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##C_CUSTKEY", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##O_ORDERDATE", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##C_MKTSEGMENT", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##O_CUSTKEY", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##L_ORDERKEY" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "C_MKTSEGMENT = '$segment' and C_CUSTKEY = O_CUSTKEY and \nL_ORDERKEY = O_ORDERKEY and O_ORDERDATE < '$datestring'and \nL_SHIPDATE < '$datestring'\n"
+        }
+      }
+    },
+    "bTTW0Lm8B3PX-CV99ShIi$$10QTtfEABkST4dERD7BK2" : {
+      "id" : "bTTW0Lm8B3PX-CV99ShIi$$10QTtfEABkST4dERD7BK2",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Orders_TPCH",
+        "slug" : "Orders_TPCH",
+        "x" : -60,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "5hd876X66TGmOzr6k68kz$$2KCztveSiAcD476VIDT-q",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Orders_TPCH"
+      }
+    },
     "kCZLzEmPWiSwwbhB_mKzs$$GJMGB6OmO4z_1zwJb8hCa" : {
       "id" : "kCZLzEmPWiSwwbhB_mKzs$$GJMGB6OmO4z_1zwJb8hCa",
       "component" : "Reformat",
@@ -285,11 +902,13 @@
       "ports" : {
         "inputs" : [ {
           "id" : "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT",
-          "slug" : "in0"
+          "slug" : "in0",
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "KV24DPOw7wk1IriVmzSoT$$PIBGMnRpgqj8di8pqDf-n",
-          "slug" : "out"
+          "slug" : "out",
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
@@ -300,55 +919,55 @@
           "target" : "QUANTITY",
           "expression" : {
             "format" : "sql",
-            "expression" : "QUANTITY"
+            "expression" : "L_QUANTITY"
           },
           "description" : ""
         }, {
           "target" : "EXTENDEDPRICE",
           "expression" : {
             "format" : "sql",
-            "expression" : "EXTENDEDPRICE"
+            "expression" : "L_EXTENDEDPRICE"
           },
           "description" : ""
         }, {
           "target" : "DISCOUNT",
           "expression" : {
             "format" : "sql",
-            "expression" : "DISCOUNT"
+            "expression" : "L_DISCOUNT"
           },
           "description" : ""
         }, {
           "target" : "TAX",
           "expression" : {
             "format" : "sql",
-            "expression" : "cast(if(TAX == 0, 0.02, TAX) as decimal(12,2))"
+            "expression" : "cast(if(L_TAX == 0, 0.02, L_TAX) as decimal(12,2))"
           },
           "description" : ""
         }, {
           "target" : "RETURNFLAG",
           "expression" : {
             "format" : "sql",
-            "expression" : "RETURNFLAG"
+            "expression" : "L_RETURNFLAG"
           },
           "description" : ""
         }, {
           "target" : "DELIVERYSTATUS",
           "expression" : {
             "format" : "sql",
-            "expression" : "DELIVERYSTATUS"
+            "expression" : "L_DELIVERYSTATUS"
           },
           "description" : ""
         }, {
           "target" : "CLEARANCE",
           "expression" : {
             "format" : "sql",
-            "expression" : "case when (\n    DISCOUNT > 0.06\n)\nor (\n    RETURNFLAG is true\n) then 'true' else 'false' end"
+            "expression" : "case when (\n    L_DISCOUNT > 0.06\n)\nor (\n    L_RETURNFLAG is true\n) then 'true' else 'false' end"
           },
           "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##QUANTITY", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##RETURNFLAG", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##DELIVERYSTATUS", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##TAX", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##EXTENDEDPRICE", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##DISCOUNT" ]
+        "columnsSelector" : [ "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##L_DELIVERYSTATUS", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##L_RETURNFLAG", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##L_DISCOUNT", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##L_EXTENDEDPRICE", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##L_QUANTITY", "qIymrh6Hd-vpJ1__FXf27$$x8cCnX7k7TPWELQMl42zT##L_TAX" ]
       }
     },
     "GxBesIASLHOBbqdEqxjsc$$GBqLMRQPrIQGNvLH4NnjD" : {
@@ -357,7 +976,7 @@
       "metadata" : {
         "label" : "Shipments",
         "slug" : "Shipments",
-        "x" : 120.00002100073937,
+        "x" : -40,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -368,7 +987,8 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "rx5Yf38R-Lq0XRrh1SuUR$$toPX_eZo2xWOmO45w84If",
-          "slug" : "out"
+          "slug" : "out",
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false

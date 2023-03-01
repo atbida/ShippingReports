@@ -1,3 +1,9 @@
 version: 1
 configurations:
+- Machinery
+- Automobile
+- Furniture
 - default
+- Household
+- Building
+dependencies: []

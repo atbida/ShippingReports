@@ -5,7 +5,7 @@ from prophecy.libs import typed_lit
 from pricing.config.ConfigStore import *
 from pricing.udfs.UDFs import *
 
-def SumAmounts(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def SumAmounts_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
     df1 = in0.groupBy(col("RETURNFLAG"), col("DELIVERYSTATUS"))
 
     return df1.agg(
