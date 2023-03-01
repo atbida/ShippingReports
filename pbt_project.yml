@@ -20,13 +20,14 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2022-12-08 21:02:35'
-    modifiedAt: '2022-12-08 21:02:35'
+    modifiedAt: '2023-03-01 23:09:52'
     datasets:
       inputs:
       - datasets/Customer_TPCH
       - datasets/Orders_TPCH
       - datasets/Shipments
       outputs:
+      - datasets/UnshippedOrders
       - datasets/report_shipment_prices
     subgraphs: []
     dependencies: {}
@@ -36,7 +37,7 @@ datasets:
     description: ''
     author: sparklearner123@gmail.com
     createdAt: '2022-12-08 21:05:07'
-    modifiedAt: '2022-12-08 21:05:07'
+    modifiedAt: '2023-03-01 22:42:25'
     mode: batch
     physicalDatasets:
       dev:
@@ -51,7 +52,7 @@ datasets:
     description: ''
     author: sparklearner123@gmail.com
     createdAt: '2022-12-08 21:12:16'
-    modifiedAt: '2022-12-08 21:12:16'
+    modifiedAt: '2023-03-01 22:42:25'
     mode: batch
     physicalDatasets:
       dev:
@@ -66,7 +67,7 @@ datasets:
     description: ''
     author: sparklearner123@gmail.com
     createdAt: '2023-02-25 01:28:30'
-    modifiedAt: '2023-02-25 01:28:30'
+    modifiedAt: '2023-03-01 22:42:25'
     mode: batch
     physicalDatasets:
       dev:
@@ -81,7 +82,7 @@ datasets:
     description: ''
     author: sparklearner123@gmail.com
     createdAt: '2023-02-27 20:51:42'
-    modifiedAt: '2023-02-27 20:51:42'
+    modifiedAt: '2023-03-01 22:42:25'
     mode: batch
     physicalDatasets:
       dev:
@@ -91,6 +92,21 @@ datasets:
         author: sparklearner123@gmail.com
         createdAt: '2023-02-27 20:51:42'
         modifiedAt: '2023-02-27 20:51:42'
+  datasets/UnshippedOrders:
+    name: UnshippedOrders
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2023-03-01 23:09:50'
+    modifiedAt: '2023-03-01 23:09:52'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 56
+        datasetType: File
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2023-03-01 23:09:50'
+        modifiedAt: '2023-03-01 23:09:50'
 templates: {}
 jobs:
   jobs/PricingReportBatchJob:
