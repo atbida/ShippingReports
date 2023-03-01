@@ -19,3 +19,7 @@ Adds configurable market segment for tracking the shipping orders
 *** Release notes for version: 0.0.1 ***
 
 initial release to enable project sharing
+
+*** Release notes for version: 0.0.2 ***
+
+writes to UnshippedOrders dataset
