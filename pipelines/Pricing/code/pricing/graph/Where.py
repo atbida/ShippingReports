@@ -5,10 +5,10 @@ from prophecy.libs import typed_lit
 from pricing.config.ConfigStore import *
 from pricing.udfs.UDFs import *
 
-def Filter_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def Where(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.filter(
         (
           (((col("C_MKTSEGMENT") == lit(Config.segment)) & (col("C_CUSTKEY") == col("O_CUSTKEY"))) & (col("L_ORDERKEY") == col("O_ORDERKEY")))
-          & ((col("O_ORDERDATE") < lit(Config.date)) & (col("L_SHIPDATE") < lit(Config.date)))
+          & ((col("O_ORDERDATE") < lit(Config.datestring)) & (col("L_SHIPDATE") < lit(Config.datestring)))
         )
     )

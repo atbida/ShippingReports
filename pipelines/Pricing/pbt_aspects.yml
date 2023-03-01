@@ -1,5 +1,4 @@
 version: 1
-dependencies: []
 configurations:
 - Machinery
 - Automobile
@@ -7,3 +6,4 @@ configurations:
 - default
 - Household
 - Building
+dependencies: []

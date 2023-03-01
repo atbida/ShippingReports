@@ -31,10 +31,10 @@
           },
           "optional" : false
         }, {
-          "name" : "date",
+          "name" : "datestring",
           "kind" : {
             "type" : "string",
-            "value" : "1995-03-01"
+            "value" : "1993-11-13"
           },
           "optional" : false
         } ]
@@ -169,8 +169,8 @@
       "id" : "_AtaeVOFVJfSYlXOvF7Gl$$LUhHzE2kSBsAzg15pRInb",
       "component" : "OrderBy",
       "metadata" : {
-        "label" : "OrderBy_1",
-        "slug" : "OrderBy_1",
+        "label" : "Date",
+        "slug" : "Date",
         "x" : 900,
         "y" : 420,
         "phase" : 0,
@@ -193,7 +193,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "1_hIr_TQoGBIe3R38QWJz$$PvqZ7h_h8EDCrmOLDt47k##REVENUE", "1_hIr_TQoGBIe3R38QWJz$$PvqZ7h_h8EDCrmOLDt47k##O_ORDERDATE" ],
         "orders" : [ {
           "expression" : {
             "format" : "sql",
@@ -213,8 +213,8 @@
       "id" : "jdR7nZu03GWqYbx_vy_P2$$d4PL_FcSI-CivJW1pco-E",
       "component" : "Join",
       "metadata" : {
-        "label" : "Join_1",
-        "slug" : "Join_1",
+        "label" : "Join",
+        "slug" : "Join",
         "x" : 420,
         "y" : 420,
         "phase" : 0,
@@ -279,7 +279,7 @@
         } ],
         "allIn1" : null,
         "activeTab" : "conditions",
-        "columnsSelector" : [ "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL##O_ORDERKEY", "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL##O_CUSTKEY", "SyeFta4yNWh_tq2_aadVc$$ZmjyXy09p6p0dQLUc4ljX##C_CUSTKEY" ],
+        "columnsSelector" : [ "HXcAGaSPE9M90F7M1QvEy$$iuCwu9YI5AKQSpwTEEj8Z##L_ORDERKEY", "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL##O_ORDERKEY", "SyeFta4yNWh_tq2_aadVc$$ZmjyXy09p6p0dQLUc4ljX##C_CUSTKEY", "yQ9SAmTgKw9proznEkXmw$$MwwhAF95aRotSWYLf9eWL##O_CUSTKEY" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
@@ -741,8 +741,8 @@
       "id" : "CJehEwqpSCa9hDMifU-Tg$$fUkFf9ZAl-RETCYxQDOv_",
       "component" : "Aggregate",
       "metadata" : {
-        "label" : "Aggregate_1",
-        "slug" : "Aggregate_1",
+        "label" : "SumRevenue",
+        "slug" : "SumRevenue",
         "x" : 740,
         "y" : 420,
         "phase" : 0,
@@ -796,7 +796,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##O_ORDERDATE", "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##L_DISCOUNT", "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##O_SHIP-PRIORITY", "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##L_EXTENDEDPRICE", "OVA4yHFaW5lna6qnzhEz1$$KIKT_7ycxRm6BqNruaXbw##L_ORDERKEY" ],
         "groupBy" : [ {
           "target" : "L_ORDERKEY",
           "expression" : {
@@ -828,8 +828,8 @@
       "id" : "xNvnnzZNyrf2lyyX2GHS-$$E_7JrTUyeaUVOeC-lrljg",
       "component" : "Filter",
       "metadata" : {
-        "label" : "Filter_1",
-        "slug" : "Filter_1",
+        "label" : "Where",
+        "slug" : "Where",
         "x" : 580,
         "y" : 420,
         "phase" : 0,
@@ -852,10 +852,10 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##O_ORDERKEY", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##L_SHIPDATE", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##C_CUSTKEY", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##O_ORDERDATE", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##C_MKTSEGMENT", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##O_CUSTKEY", "dgpH_uiodBVzGYyazndkL$$KQVjLIpm30L9ATmZkzcrd##L_ORDERKEY" ],
         "condition" : {
           "format" : "sql",
-          "expression" : "C_MKTSEGMENT = '$segment' and C_CUSTKEY = O_CUSTKEY and \nL_ORDERKEY = O_ORDERKEY and O_ORDERDATE < '$date'and \nL_SHIPDATE < '$date'\n"
+          "expression" : "C_MKTSEGMENT = '$segment' and C_CUSTKEY = O_CUSTKEY and \nL_ORDERKEY = O_ORDERKEY and O_ORDERDATE < '$datestring'and \nL_SHIPDATE < '$datestring'\n"
         }
       }
     },
@@ -865,8 +865,8 @@
       "metadata" : {
         "label" : "Orders_TPCH",
         "slug" : "Orders_TPCH",
-        "x" : -260,
-        "y" : 440,
+        "x" : -60,
+        "y" : 420,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,

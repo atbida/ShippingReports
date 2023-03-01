@@ -1,5 +1,5 @@
 {
   "Database" : "FEEDSTOCKS",
   "segment" : "BUILDING",
-  "date" : "foo_date"
+  "datestring" : "foo_date"
 }
