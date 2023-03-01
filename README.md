@@ -7,3 +7,7 @@ Creates a Pricing summary report and schedules the pipeline to be run every 2 mi
 *** Release notes for version: 0.02 ***
 
 pause the job
+
+*** Release notes for version: 0.0.3 ***
+
+adds a filter gem to filter RETURNFLAG
