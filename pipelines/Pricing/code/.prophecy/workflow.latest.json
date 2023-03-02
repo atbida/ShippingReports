@@ -48,7 +48,7 @@
       },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "default",
+      "selected" : "Building",
       "nonEditable" : [ ],
       "isSubscribedPipelineWithPipelineConfigs" : false
     },
@@ -59,11 +59,11 @@
     "externalDependencies" : [ ],
     "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
-    "interimMode" : "Full",
+    "interimMode" : "IO",
     "interimModeEnabled" : true,
     "visualCodeInterimMode" : "Disabled",
     "recordsLimit" : {
-      "enabled" : true,
+      "enabled" : false,
       "value" : 100000
     },
     "topLevelPackage" : "pricing"
@@ -74,18 +74,6 @@
     "sourcePort" : "KV24DPOw7wk1IriVmzSoT$$PIBGMnRpgqj8di8pqDf-n",
     "target" : "G7NuYuX3V0HYK57mlgLQG$$ontJz5_GyRVgsz4CUyFtl",
     "targetPort" : "vs8FlLUIJF5rgK8IzU2iA$$2JR0cDU7BxgFqgk09Afxl"
-  }, {
-    "id" : "2bI4CJHw4PZOwiOOjflkV",
-    "source" : "G7NuYuX3V0HYK57mlgLQG$$ontJz5_GyRVgsz4CUyFtl",
-    "sourcePort" : "OPNCP3n7eFNSeY53mEXtr$$3cSF8oIx4m-QmZPVSvGQU",
-    "target" : "eMKsxsutBgJHSGSDjGAZY$$zGdMXBaPj9GzwoOCIyVEl",
-    "targetPort" : "ht_vXEjAqlUQHgUXX2L-n$$0Yt5scQLZkPrbtt-_H6W2"
-  }, {
-    "id" : "I4ESHqLenM8aCzk0WAN_o",
-    "source" : "eMKsxsutBgJHSGSDjGAZY$$zGdMXBaPj9GzwoOCIyVEl",
-    "sourcePort" : "zca9-6n3uRVTvW17BxzpW$$4SpoqnUHTkGn405oFIYo-",
-    "target" : "pKdW1FxuSw9NwgWTtGMBb$$i5tm9LJHXESbkc_sBx4Ui",
-    "targetPort" : "i4Lzlxqq47UhSnLrbcunn$$6X1vKo37fktqYdz9ix0ld"
   }, {
     "id" : "Gt_ArzcR_PGq_EehvYBB-",
     "source" : "bTTW0Lm8B3PX-CV99ShIi$$10QTtfEABkST4dERD7BK2",
@@ -140,6 +128,18 @@
     "sourcePort" : "fXiKV2owG3g6tBWasx196$$OBkyVEHUz_GrIKUiIj7X_",
     "target" : "6J-T3k1C8dXbD7eFGg2or$$36YqfZUgTfM4L5DTqSOmU",
     "targetPort" : "1c3AXRLSBm_vhrKPTN0Jt$$23faMixYElZg10wkVfCsN"
+  }, {
+    "id" : "D9UDxCTCMD439YJJOAsFw",
+    "source" : "G7NuYuX3V0HYK57mlgLQG$$ontJz5_GyRVgsz4CUyFtl",
+    "sourcePort" : "OPNCP3n7eFNSeY53mEXtr$$3cSF8oIx4m-QmZPVSvGQU",
+    "target" : "aKcoDtHJNYL1pPwSO1vQW$$ESxRe8e0glaK-trjqrpEn",
+    "targetPort" : "bRJmSqmKKgZUR6UkTFXGs$$gszvqNaxtSs3AqiNSaugK"
+  }, {
+    "id" : "6-fHpctDn53iUq_fQcs-b",
+    "source" : "aKcoDtHJNYL1pPwSO1vQW$$ESxRe8e0glaK-trjqrpEn",
+    "sourcePort" : "tgi4-RKvgyl4Yoq1g9nmu$$vjvCL_oYQiOcAUSF5TSiI",
+    "target" : "pKdW1FxuSw9NwgWTtGMBb$$i5tm9LJHXESbkc_sBx4Ui",
+    "targetPort" : "i4Lzlxqq47UhSnLrbcunn$$6X1vKo37fktqYdz9ix0ld"
   } ],
   "processes" : {
     "VZ7ZpeitwL-kfEnoNGVGy$$yuHDuRnNrIKiPBmUAJgPs" : {
@@ -702,13 +702,238 @@
         "datasetId" : "datasets/UnshippedOrders"
       }
     },
+    "aKcoDtHJNYL1pPwSO1vQW$$ESxRe8e0glaK-trjqrpEn" : {
+      "id" : "aKcoDtHJNYL1pPwSO1vQW$$ESxRe8e0glaK-trjqrpEn",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : 800,
+        "y" : 80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bRJmSqmKKgZUR6UkTFXGs$$gszvqNaxtSs3AqiNSaugK",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RETURNFLAG",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DELIVERYSTATUS",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SUM_QTY",
+              "type" : "decimal(22,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AVG_QTY",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SUM_CHARGE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "COUNT_ORDER",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "COUNT_CLEARANCE",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "tgi4-RKvgyl4Yoq1g9nmu$$vjvCL_oYQiOcAUSF5TSiI",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "packageName" : "com.acmeshipping",
+        "externalId" : "subgraphs/OrderBy",
+        "name" : "OrderBy"
+      },
+      "connections" : [ {
+        "id" : "gdHn_FERXFG3oEm4TiyxP",
+        "source" : "aKcoDtHJNYL1pPwSO1vQW$$ESxRe8e0glaK-trjqrpEn",
+        "sourcePort" : "bRJmSqmKKgZUR6UkTFXGs$$gszvqNaxtSs3AqiNSaugK",
+        "target" : "yjo16EiJgdPtQi1Znr5c_$$3bJ19Gip22VJaMmNHoudK",
+        "targetPort" : "GuyV0DqJ3XBnOIzkBu7Xd$$Tj1E0avmF7g9Vcw1GwM3c"
+      }, {
+        "id" : "OhkPYbmp3oqHCIy_U__Xy",
+        "source" : "yjo16EiJgdPtQi1Znr5c_$$3bJ19Gip22VJaMmNHoudK",
+        "sourcePort" : "RBDyssnkBjC5bFjLQwX9f$$hGcD0-2TL_Kx3Qm8mmhya",
+        "target" : "aKcoDtHJNYL1pPwSO1vQW$$ESxRe8e0glaK-trjqrpEn",
+        "targetPort" : "tgi4-RKvgyl4Yoq1g9nmu$$vjvCL_oYQiOcAUSF5TSiI"
+      } ],
+      "processes" : {
+        "yjo16EiJgdPtQi1Znr5c_$$3bJ19Gip22VJaMmNHoudK" : {
+          "id" : "yjo16EiJgdPtQi1Znr5c_$$3bJ19Gip22VJaMmNHoudK",
+          "component" : "OrderBy",
+          "metadata" : {
+            "label" : "ByStatus_1",
+            "slug" : "ByStatus_1",
+            "x" : 360,
+            "y" : 320,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "GuyV0DqJ3XBnOIzkBu7Xd$$Tj1E0avmF7g9Vcw1GwM3c",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "RETURNFLAG",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "DELIVERYSTATUS",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SUM_QTY",
+                  "type" : "decimal(22,2)",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "AVG_QTY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SUM_CHARGE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "COUNT_ORDER",
+                  "type" : "long",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "COUNT_CLEARANCE",
+                  "type" : "long",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "RBDyssnkBjC5bFjLQwX9f$$hGcD0-2TL_Kx3Qm8mmhya",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "orders" : [ {
+              "expression" : {
+                "format" : "sql",
+                "expression" : "RETURNFLAG"
+              },
+              "sortType" : "asc"
+            }, {
+              "expression" : {
+                "format" : "sql",
+                "expression" : "DELIVERYSTATUS"
+              },
+              "sortType" : "asc"
+            } ]
+          }
+        }
+      },
+      "externalDependencies" : [ ]
+    },
     "pKdW1FxuSw9NwgWTtGMBb$$i5tm9LJHXESbkc_sBx4Ui" : {
       "id" : "pKdW1FxuSw9NwgWTtGMBb$$i5tm9LJHXESbkc_sBx4Ui",
       "component" : "Target",
       "metadata" : {
         "label" : "ReportPrices",
         "slug" : "ReportPrices",
-        "x" : 920,
+        "x" : 1080,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -1246,116 +1471,6 @@
           "description" : ""
         } ],
         "columnsSelector" : [ "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##RECEIPTDATE", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##SUPPKEY", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##COMMENT", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##LINENUMBER", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##PARTKEY", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##QUANTITY", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##SHIPINSTRUCT", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##EXTENDEDPRICE", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##TAX", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##COMMITDATE", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##RETURNFLAG", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##DISCOUNT", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##SHIPDATE", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##ORDERKEY", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##DELIVERYSTATUS", "4KqPm05cOxgPxXRppFaVE$$HYomiP0EvcASgBB5EoWVD##SHIPMODE" ]
-      }
-    },
-    "eMKsxsutBgJHSGSDjGAZY$$zGdMXBaPj9GzwoOCIyVEl" : {
-      "id" : "eMKsxsutBgJHSGSDjGAZY$$zGdMXBaPj9GzwoOCIyVEl",
-      "component" : "OrderBy",
-      "metadata" : {
-        "label" : "ByStatus",
-        "slug" : "ByStatus",
-        "x" : 720.0002712522062,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "ht_vXEjAqlUQHgUXX2L-n$$0Yt5scQLZkPrbtt-_H6W2",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "RETURNFLAG",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "DELIVERYSTATUS",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "SUM_QTY",
-              "type" : "decimal(22,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "AVG_QTY",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "SUM_CHARGE",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "COUNT_ORDER",
-              "type" : "long",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "COUNT_CLEARANCE",
-              "type" : "long",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "zca9-6n3uRVTvW17BxzpW$$4SpoqnUHTkGn405oFIYo-",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ "ht_vXEjAqlUQHgUXX2L-n$$0Yt5scQLZkPrbtt-_H6W2##RETURNFLAG", "ht_vXEjAqlUQHgUXX2L-n$$0Yt5scQLZkPrbtt-_H6W2##DELIVERYSTATUS" ],
-        "orders" : [ {
-          "expression" : {
-            "format" : "sql",
-            "expression" : "RETURNFLAG"
-          },
-          "sortType" : "asc"
-        }, {
-          "expression" : {
-            "format" : "sql",
-            "expression" : "DELIVERYSTATUS"
-          },
-          "sortType" : "asc"
-        } ]
       }
     },
     "CJehEwqpSCa9hDMifU-Tg$$fUkFf9ZAl-RETCYxQDOv_" : {

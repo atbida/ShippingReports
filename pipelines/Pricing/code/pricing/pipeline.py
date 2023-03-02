@@ -18,8 +18,8 @@ def pipeline(spark: SparkSession) -> None:
     UnshippedOrders(spark, df_Date)
     df_Cleanup = Cleanup(spark, df_Reformat_1)
     df_SumAmounts = SumAmounts(spark, df_Cleanup)
-    df_ByStatus = ByStatus(spark, df_SumAmounts)
-    ReportPrices(spark, df_ByStatus)
+    df_Subgraph_1 = Subgraph_1(spark, df_SumAmounts)
+    ReportPrices(spark, df_Subgraph_1)
 
 def main():
     spark = SparkSession.builder\
