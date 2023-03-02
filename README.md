@@ -23,3 +23,7 @@ initial release to enable project sharing
 *** Release notes for version: 0.0.2 ***
 
 writes to UnshippedOrders dataset
+
+*** Release notes for version: 0.0.3 ***
+
+releasing with subgraph
